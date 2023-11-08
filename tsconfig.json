@@ -7,7 +7,7 @@
     "lib": ["ESNext", "DOM", "DOM.Iterable", "scripthost"],
     "skipLibCheck": true,
     "outDir": "dist",
-    
+
     /* Bundler mode */
     "moduleResolution": "Node",
     "allowImportingTsExtensions": true,
@@ -21,13 +21,21 @@
 
     /* Linting */
     "strict": true,
+    "verbatimModuleSyntax": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
+    "noImplicitAny": true,
+    "useUnknownInCatchVariables": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
     "paths": {
       "@/*": ["src/*"]
-    },
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

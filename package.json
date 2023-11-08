@@ -46,7 +46,7 @@
     "serve": "vite preview --port 5050",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit",
-    "lint": "eslint ./src/**",
+    "lint": "eslint ./src/**/*.{js,ts,jsx,tsx,vue}",
     "lint:fix": "eslint ./src/** --fix",
     "lint:style": "stylelint src/**/*.{css,scss,vue}",
     "test": "exit 0"
