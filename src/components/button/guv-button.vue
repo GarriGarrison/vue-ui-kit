@@ -19,19 +19,21 @@ useOnMount(emit);
 </script>
 
 <template>
-  <button
-    class="guv-button"
-    :class="{ disabled: disabled }"
-    :style="style"
-    :disabled="disabled"
-    @click="onClick(emit, $event)"
-  >
-    <slot name="before" />
-    <slot>
-      {{ title }}
-    </slot>
-    <slot name="after" />
-  </button>
+  <div class="test">
+    <button
+      class="guv-button"
+      :class="{ disabled: disabled }"
+      :style="style"
+      :disabled="disabled"
+      @click="onClick(emit, $event)"
+    >
+      <slot name="before" />
+      <slot>
+        {{ title }}
+      </slot>
+      <slot name="after" />
+    </button>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -68,5 +70,9 @@ useOnMount(emit);
       background: var(--bg-button, $bg-button);
     }
   }
+}
+
+.test {
+  user-select: none;
 }
 </style>
