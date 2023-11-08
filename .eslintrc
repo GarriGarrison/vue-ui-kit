@@ -1,27 +1,37 @@
 {
   "root": true,
   "env": {
+    "browser": true,
     "node": true,
     "es2022": true
   },
-  "parser": "@typescript-eslint/parser",
   "extends": [
+    "plugin:vue/recommended",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/strict",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "@vue/typescript/recommended"
   ],
   "overrides": [],
+  // "parser": "@typescript-eslint/parser",
+  "parser": "vue-eslint-parser", // for VUE
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": false
     },
-    "tsconfigRootDit": "__dirname"
+    "tsconfigRootDit": "__dirname",
+    "parser": {
+      // for VUE
+      "ts": "@typescript-eslint/parser",
+      "js": "espree",
+      "<template>": "espree"
+    }
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "vue"],
   "rules": {
     "no-console": "warn",
     "no-debugger": "warn",

@@ -2,8 +2,8 @@ name: Github Packages UI Library Actions
 
 on:
   push:
-    # branches:
-    #   - main
+    branches:
+      - main
 
 jobs:
   build:

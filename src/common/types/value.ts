@@ -1,4 +1,5 @@
-import { Ref, ComponentPublicInstance } from 'vue';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import type { Ref, ComponentPublicInstance } from 'vue';
 
 export type VueComponent<T = ComponentPublicInstance> = T extends abstract new (...args: any) => any
   ? InstanceType<T>
