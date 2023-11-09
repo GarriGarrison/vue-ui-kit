@@ -19,45 +19,43 @@ useOnMount(emit);
 </script>
 
 <template>
-  <div class="test">
-    <button
-      class="guv-button"
-      :class="{ disabled: disabled }"
-      :style="style"
-      :disabled="disabled"
-      @click="onClick(emit, $event)"
-    >
-      <slot name="before" />
-      <slot>
-        {{ title }}
-      </slot>
-      <slot name="after" />
-    </button>
-  </div>
+  <button
+    class="guv-button"
+    :class="{ disabled: disabled }"
+    :style="style"
+    :disabled="disabled"
+    @click="onClick(emit, $event)"
+  >
+    <slot name="before" />
+    <slot>
+      {{ title }}
+    </slot>
+    <slot name="after" />
+  </button>
 </template>
 
 <style scoped lang="scss">
 @import '@/assets/variables';
 
 .guv-button {
-  cursor: pointer;
   width: 100%;
-  border: 1px solid transparent;
-  border-radius: var(--border-radius, $border-radius);
-  text-rendering: auto;
   padding: 0.5rem 1rem;
-  transition: background 0.2s;
-  border-color: var(--border, $border);
-  background-color: var(--bg-button, $bg-button);
-  font-size: 1rem;
   color: var(--text);
+  font-size: 1rem;
+  background-color: var(--bg-button, $bg-button);
+  border: 1px solid transparent;
+  border-color: var(--border, $border);
+  border-radius: var(--border-radius, $border-radius);
+  cursor: pointer;
+  text-rendering: auto;
+  transition: background 0.2s;
 
   &:hover {
     background: var(--bg-hover, $bg-hover);
   }
 
   &:focus,
-  focus-visible {
+  :focus-visible {
     outline: none;
   }
 
@@ -70,9 +68,5 @@ useOnMount(emit);
       background: var(--bg-button, $bg-button);
     }
   }
-}
-
-.test {
-  user-select: none;
 }
 </style>
