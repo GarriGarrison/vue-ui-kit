@@ -1,7 +1,7 @@
 {
   "name": "@garrigarrison/vue-ui-kit",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "UI kit for Vue 3",
   "engines": {
     "node": ">= 16.14.0",
