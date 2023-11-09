@@ -1,7 +1,7 @@
 {
   "name": "@garrigarrison/vue-ui-kit",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "UI kit for Vue 3",
   "engines": {
     "node": ">= 16.14.0",
@@ -37,7 +37,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "vite",
-    "build": "npm run clean && vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "build": "npm run clean && vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types && npm run dell",
     "preserve": "vite build",
     "serve": "vite preview --port 5050",
     "preview": "vite preview",
@@ -49,7 +49,8 @@
     "lint:markup": "vue-tsc --noEmit",
     "test": "exit 0",
     "prepublishOnly": "npm run build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dell": "rm dist/vite.config.d.ts && rm dist/vite.svg && rm dist/types/App.vue.d.ts && rm dist/types/main.d.ts && rimraf dist/types/common"
   },
   "husky": {
     "hooks": {
