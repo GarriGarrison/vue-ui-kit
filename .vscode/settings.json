@@ -14,5 +14,5 @@
   "stylelint.config": null,
   "stylelint.snippet": ["vue", "css", "less", "postcss", "scss"],
   "stylelint.validate": ["vue", "css", "scss", "less", "postcss"],
-  "cSpell.words": ["espree", "mapbox", "stylelint", "typecheck"]
+  "cSpell.words": ["espree", "garrigarrison", "mapbox", "stylelint", "typecheck"]
 }

@@ -1,1 +1,1 @@
-export { GuvButton } from './components/button';
+export { default as GuvButton } from './components/button/guv-button.vue';

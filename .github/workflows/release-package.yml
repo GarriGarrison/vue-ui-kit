@@ -1,3 +1,8 @@
+# add package.json
+# "publishConfig": {
+#   "registry": "https://npm.pkg.github.com/@GarriGarrison"
+# },
+
 name: Github Packages UI Library Actions
 
 on:

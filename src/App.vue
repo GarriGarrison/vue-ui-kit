@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { GuvButton } from '.';
+import { GuvButton } from '@garrigarrison/vue-ui-kit';
+// import { GuvButton } from '.';
 </script>
 
 <template>

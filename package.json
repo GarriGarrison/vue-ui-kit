@@ -21,12 +21,9 @@
   },
   "types": "./dist/types/index.d.ts",
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@GarriGarrison"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GarriGarrison/vue-ui-kit.git"
+    "url": "git+https://github.com/GarriGarrison/vue-ui-kit.git"
   },
   "author": {
     "name": "Garrison",
@@ -35,7 +32,7 @@
   },
   "homepage": "https://github.com/GarriGarrison/vue-ui-kit#readme",
   "bugs": {
-    "url": "https://github.com/GarriGarrisonvue-ui-kite/issues"
+    "url": "https://github.com/GarriGarrison/vue-ui-kite/issues"
   },
   "scripts": {
     "clean": "rimraf dist",
@@ -65,6 +62,7 @@
     "*": "prettier -w -u"
   },
   "dependencies": {
+    "@garrigarrison/vue-ui-kit": "^0.0.1",
     "vue": "^3.3.8"
   },
   "devDependencies": {
