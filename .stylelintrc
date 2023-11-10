@@ -6,10 +6,10 @@
     "stylelint-config-recommended-scss",
     "stylelint-config-standard-scss",
     "stylelint-config-prettier-scss",
-    "stylelint-config-rational-order",
     "stylelint-prettier/recommended",
     "stylelint-config-recommended-vue",
-    "stylelint-config-css-modules"
+    "stylelint-config-css-modules",
+    "stylelint-config-recess-order"
   ],
   "plugins": ["stylelint-order", "stylelint-scss", "stylelint-config-rational-order/plugin"],
   "rules": {
