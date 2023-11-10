@@ -11,7 +11,7 @@
     "stylelint-config-recommended-vue",
     "stylelint-config-css-modules"
   ],
-  "plugins": ["stylelint-order", "stylelint-scss"],
+  "plugins": ["stylelint-order", "stylelint-scss", "stylelint-config-rational-order/plugin"],
   "rules": {
     "no-empty-first-line": null,
     "no-empty-source": null,
@@ -19,6 +19,15 @@
     "media-feature-range-notation": "prefix",
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
-    "selector-pseudo-element-colon-notation": "single"
+    "selector-pseudo-element-colon-notation": "single",
+    "order/order": ["custom-properties", "declarations", "dollar-variables", "rules", "at-rules"],
+    "order/properties-order": ["width", "height"],
+    "plugin/rational-order": [
+      true,
+      {
+        "border-in-box-model": false,
+        "empty-line-between-groups": false
+      }
+    ]
   }
 }
