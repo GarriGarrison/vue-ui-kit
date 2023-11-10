@@ -47,7 +47,9 @@
     "lint:fix": "eslint ./src/** --fix",
     "lint:style": "stylelint src/**/*.{css,scss,vue}",
     "lint:markup": "vue-tsc --noEmit",
-    "test": "vitest",
+    "test": "vitest run --coverage.enabled --coverage.lines=80",
+    "test-coverage": "vitest --coverage",
+    "jest": "vitest",
     "prepublishOnly": "npm run build",
     "prepare": "husky install",
     "dell": "rm dist/vite.config.d.ts && rm dist/vite.svg && rm dist/types/App.vue.d.ts && rm dist/types/main.d.ts && rimraf dist/types/common"
@@ -73,6 +75,7 @@
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
     "@vitejs/plugin-vue": "^4.4.0",
+    "@vitest/coverage-v8": "^0.34.6",
     "@vue/eslint-config-airbnb": "^7.0.0",
     "@vue/eslint-config-typescript": "^12.0.0",
     "@vue/test-utils": "^2.4.1",
