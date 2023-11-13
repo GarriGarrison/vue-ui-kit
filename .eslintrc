@@ -35,7 +35,18 @@
   "rules": {
     "no-console": "warn",
     "no-debugger": "warn",
-    "max-len": ["warn", { "code": 120 }],
+    "max-len": [
+      "warn",
+      {
+        "code": 120,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
     "@typescript-eslint/explicit-function-return-type": "error",
 
     "prettier/prettier": [
