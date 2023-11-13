@@ -20,6 +20,7 @@ useOnMount(emit);
 
 <template>
   <button
+    type="button"
     class="guv-button"
     :class="{ disabled: disabled }"
     :style="style"
