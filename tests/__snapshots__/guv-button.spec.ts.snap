@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button > Shapshot 1`] = `
+<button
+  class="guv-button"
+  data-v-43f84a0c=""
+>
+  
+  
+  
+  Button
+  
+  
+  
+</button>
+`;
