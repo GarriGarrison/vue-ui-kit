@@ -21,7 +21,7 @@ jobs:
         with:
           install_command: npm ci
           build_command: npm run build-storybook
-          path: docs-build # default: dist/storybook
+          path: docs # default: dist/storybook
           checkout: false # default: true
 
       # - name: Checkout

@@ -54,7 +54,7 @@
     "prepare": "husky install",
     "dell": "rm dist/vite.config.d.ts && rm dist/vite.svg && rm dist/types/App.vue.d.ts && rm dist/types/main.d.ts && rimraf dist/types/common",
     "storybook": "storybook dev",
-    "build-storybook": "storybook build -o docs-build"
+    "build-storybook": "storybook build -o docs"
   },
   "husky": {
     "hooks": {
