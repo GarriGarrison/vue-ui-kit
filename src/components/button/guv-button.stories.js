@@ -29,13 +29,13 @@ const Template = (args) => ({
   template: '<guv-button v-bind="args"> {{ args.title }} </guv-button>',
 });
 
-// export const DefaultButton = (args) => ({
-//   components: { GuvButton },
-//   setup() {
-//     return { args };
-//   },
-//   template: '<guv-button v-bind="args">Button!</guv-button>',
-// });
+export const DefaultButton = (args) => ({
+  components: { GuvButton },
+  setup() {
+    return { args };
+  },
+  template: '<guv-button v-bind="args">Button!</guv-button>',
+});
 
 export const Enabled = Template.bind({});
 Enabled.args = {
