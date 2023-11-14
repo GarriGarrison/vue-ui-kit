@@ -1,21 +1,24 @@
 // import type { ComponentPublicInstance } from 'vue';
 // import type { VueComponent } from '../types/value';
 
-export type Mount = (e: 'mount') => void;
+export type Mount = 'mount';
+export type MountEvent = (e: Mount) => void;
 
-export const onMount = (emit: Mount): void => {
+export const onMount = (emit: MountEvent): void => {
   emit('mount');
 };
 
-export type Unmount = (e: 'unmount') => void;
+export type Unmount = 'unmount';
+export type UnmountEvent = (e: Unmount) => void;
 
-export const onUnmount = (emit: Unmount): void => {
+export const onUnmount = (emit: UnmountEvent): void => {
   emit('unmount');
 };
 
-// export type Focusin = (e: 'focusin') => void;
+// export type Focusin = 'focusin';
+// export type FocusinEvent = (e: 'focusin') => void;
 
-// export const onFocusin = (emit: Focusin): void => {
+// export const onFocusin = (emit: FocusinEvent): void => {
 //   emit('focusin');
 // };
 
@@ -24,6 +27,13 @@ export const onUnmount = (emit: Unmount): void => {
 // export const onFocusout = (emit: Focusout): void => {
 //   emit('focusout');
 // };
+
+export type Click = 'click';
+export type ClickEvent = (e: Click, event: MouseEvent) => void;
+
+export const onClick = (emit: ClickEvent, event: MouseEvent): void => {
+  emit('click', event);
+};
 
 // export type Keydown = (e: 'keydown', event: KeyboardEvent) => void;
 
@@ -45,12 +55,6 @@ export const onUnmount = (emit: Unmount): void => {
 //   emit('update:modelValue', value);
 //   emit('model-value-updated', value);
 // };
-
-export type Click = (e: 'click', event: MouseEvent) => void;
-
-export const onClick = (emit: Click, event: MouseEvent): void => {
-  emit('click', event);
-};
 
 // export type Search<T> = (e: 'search', query: T) => void;
 
