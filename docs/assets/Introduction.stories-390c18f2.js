@@ -1,4 +1,4 @@
-import{r as g,M as f}from"./chunk-HLWAVYOI-8e8966d3.js";import{u as d}from"./index-57e4c7bf.js";import"./iframe-6094de20.js";import"../sb-preview/runtime.js";import"./index-eb485722.js";import"./index-d37d4223.js";import"./index-356e4a49.js";var x={exports:{}},s={};/**
+import{r as g,M as f}from"./chunk-HLWAVYOI-8dc5e995.js";import{u as d}from"./index-3f02dbba.js";import"./iframe-e4c9a36e.js";import"../sb-preview/runtime.js";import"./index-eb485722.js";import"./index-d37d4223.js";import"./index-356e4a49.js";var x={exports:{}},s={};/**
  * @license React
  * react-jsx-runtime.production.min.js
  *
@@ -112,4 +112,4 @@ import{r as g,M as f}from"./chunk-HLWAVYOI-8e8966d3.js";import{u as d}from"./ind
   `}),`
 `,o.jsx(e.h1,{id:"welcome-to-vue-ui-kit",children:"Welcome to VUE UI-kit"}),`
 `,o.jsx(e.p,{children:"This ui-kit is designed for the framework VUE3. Contains the main components."})]})}function w(t={}){const{wrapper:e}=Object.assign({},d(),t.components);return e?o.jsx(e,{...t,children:o.jsx(m,{...t})}):m(t)}const E=()=>{throw new Error("Docs-only story")};E.parameters={docsOnly:!0};const n={title:"Example/Introduction",tags:["stories-mdx"],includeStories:["__page"]};n.parameters=n.parameters||{};n.parameters.docs={...n.parameters.docs||{},page:w};const M=["__page"];export{M as __namedExportsOrder,E as __page,n as default};
-//# sourceMappingURL=Introduction.stories-f6a522c5.js.map
+//# sourceMappingURL=Introduction.stories-390c18f2.js.map

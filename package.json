@@ -54,8 +54,8 @@
     "prepare": "husky install",
     "dell": "rm dist/vite.config.d.ts && rm dist/vite.svg && rm dist/types/App.vue.d.ts && rm dist/types/main.d.ts && rimraf dist/types/common",
     "storybook": "storybook dev",
-    "build-storybook": "storybook build",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "build-storybook": "storybook build -o docs",
+    "deploy-storybook": "gh-pages -d docs"
   },
   "husky": {
     "hooks": {
