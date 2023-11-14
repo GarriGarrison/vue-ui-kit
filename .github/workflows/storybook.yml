@@ -1,56 +1,75 @@
-name: Storybook
+name: Build and Publish storybook to GitHub Pages
+
 on:
   push:
-    paths: ['src/stories/**', 'src/components/**']
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
+    branches:
+      - "main"
 jobs:
-  build-and-deploy:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.build-publish.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
+    - id: build-publish
+      uses: bitovi/github-actions-storybook-to-github-pages@v1.0.1
+      with:
+        path: docs
+        build_command: npm run build-storybook
+
+# name: Storybook
+# on:
+#   push:
+#     paths: ['src/stories/**', 'src/components/**']
+
+# permissions:
+#   contents: read
+#   pages: write
+#   id-token: write
+
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: '16.x'
       
-      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.1
-        with:
-          install_command: npm ci
-          build_command: npm run build-storybook
-          path: docs # default: dist/storybook
-          checkout: false # default: true
+#       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.1
+#         with:
+#           install_command: npm ci
+#           build_command: npm run build-storybook
+#           path: docs # default: dist/storybook
+#           checkout: false # default: true
 
-      # - name: Checkout
-      #   uses: actions/checkout@v2.3.1
+#       # - name: Checkout
+#       #   uses: actions/checkout@v2.3.1
 
-      # - name: Install and Build
-      #   run: |
-      #     npm ci
-      #     npm run build-storybook
+#       # - name: Install and Build
+#       #   run: |
+#       #     npm ci
+#       #     npm run build-storybook
 
-      # - name: Deploy
-      #   uses: JamesIves/github-pages-deploy-action@3.6.2
-      #   with:
-      #     BRANCH: main
-      #     FOLDER: docs-build
+#       # - name: Deploy
+#       #   uses: JamesIves/github-pages-deploy-action@3.6.2
+#       #   with:
+#       #     BRANCH: main
+#       #     FOLDER: docs-build
 
-      # - name: Checkout 🛎️
-      #   uses: actions/checkout@v2.3.1
-      #   with:
-      #     persist-credentials: false
-      # - name: Install and Build 🔧
-      #   run:
-      #     npm ci
-      #     npm run build-storybook
-      # - name: Deploy 🚀
-      #   uses: JamesIves/github-pages-deploy-action@3.6.2
-      #   with:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     BRANCH: main
-      #     FOLDER: docs-build
-      #     CLEAN: true
-      #     TARGET_FOLDER: docs
+#       # - name: Checkout 🛎️
+#       #   uses: actions/checkout@v2.3.1
+#       #   with:
+#       #     persist-credentials: false
+#       # - name: Install and Build 🔧
+#       #   run:
+#       #     npm ci
+#       #     npm run build-storybook
+#       # - name: Deploy 🚀
+#       #   uses: JamesIves/github-pages-deploy-action@3.6.2
+#       #   with:
+#       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       #     BRANCH: main
+#       #     FOLDER: docs-build
+#       #     CLEAN: true
+#       #     TARGET_FOLDER: docs
