@@ -1,31 +1,33 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { defineComponent } from 'vue';
 import GuvButton from './guv-button.vue';
 
 export default {
-  title: 'Button',
+  title: 'Example/Button',
   component: GuvButton,
   argTypes: {
     title: {
-      control: { type: 'string' },
-      defaultValue: 'Button',
+      type: 'string',
+      control: 'text',
+      value: 'Button',
     },
     disabled: {
       control: { type: 'boolean' },
       defaultValue: false,
     },
-    onClick: {},
+    onClick: {
+      description: 'emitted "click": MouseEvent',
+      control: '() => void',
+    },
   },
 };
 
-const Template = (args) =>
-  defineComponent({
-    components: { GuvButton },
-    setup() {
-      return { args };
-    },
-    template: '<guv-button v-bind="args"> {{ args.title }} </guv-button>',
-  });
+const Template = (args) => ({
+  components: { GuvButton },
+  setup() {
+    return { args };
+  },
+  template: '<guv-button v-bind="args"> {{ args.title }} </guv-button>',
+});
 
 export const DefaultButton = (args) => ({
   components: { GuvButton },

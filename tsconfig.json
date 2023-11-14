@@ -18,6 +18,7 @@
     "sourceMap": true,
     "esModuleInterop": true,
     "declaration": true,
+    "allowJs": false,
 
     /* Linting */
     "strict": true,
@@ -38,16 +39,7 @@
     }
   },
   // "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["src/**/*.stories.ts"],
-  "include": [
-    "vite.config.*",
-    "env.d.ts",
-    "src/**/*",
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/guv-button.spec.ts"
-  ],
+  "exclude": ["src/**/*.stories.*", "src/stories"],
+  "include": ["vite.config.*", "env.d.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
