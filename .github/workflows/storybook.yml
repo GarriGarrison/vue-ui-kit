@@ -1,24 +1,43 @@
 name: Storybook
-on: 
+on:
   push:
-    paths: ["src/stories/**", "src/components/**"]
+    paths: ['src/stories/**', 'src/components/**']
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.1
-
-      - name: Install and Build
-        run: |
-          npm ci
-          npm run build-storybook
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          BRANCH: main
-          FOLDER: docs-build
+          node-version: '16.x'
+      
+      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.1
+        with:
+          install_command: npm ci
+          build_command: npm run build-storybook
+          path: docs-build # default: dist/storybook
+          checkout: false # default: true
+
+      # - name: Checkout
+      #   uses: actions/checkout@v2.3.1
+
+      # - name: Install and Build
+      #   run: |
+      #     npm ci
+      #     npm run build-storybook
+
+      # - name: Deploy
+      #   uses: JamesIves/github-pages-deploy-action@3.6.2
+      #   with:
+      #     BRANCH: main
+      #     FOLDER: docs-build
+
       # - name: Checkout 🛎️
       #   uses: actions/checkout@v2.3.1
       #   with:
