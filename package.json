@@ -54,7 +54,8 @@
     "prepare": "husky install",
     "dell": "rm dist/vite.config.d.ts && rm dist/vite.svg && rm dist/types/App.vue.d.ts && rm dist/types/main.d.ts && rimraf dist/types/common",
     "storybook": "storybook dev",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "husky": {
     "hooks": {
@@ -97,6 +98,7 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-vue": "^9.18.1",
+    "gh-pages": "^6.0.0",
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",
     "lint-staged": "^15.0.2",
