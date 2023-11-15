@@ -37,6 +37,28 @@ describe('Button', () => {
     expect(wrapper.html()).toContain('<div>After</div>');
   });
 
+  it('Size -> standard', () => {
+    expect(Button).toBeTruthy();
+
+    const wrapper = mount(Button, {
+      props: {
+        size: 'standard',
+      },
+    });
+    expect(wrapper.classes()).toContain('standard');
+  });
+
+  it('Size -> small', () => {
+    expect(Button).toBeTruthy();
+
+    const wrapper = mount(Button, {
+      props: {
+        size: 'small',
+      },
+    });
+    expect(wrapper.classes()).toContain('small');
+  });
+
   it('Classes -> main', () => {
     expect(Button).toBeTruthy();
 

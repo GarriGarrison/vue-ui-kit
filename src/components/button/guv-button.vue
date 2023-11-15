@@ -6,11 +6,13 @@ import type { CommonProps } from '@/common/mixin/props';
 export interface Props extends CommonProps {
   title?: string;
   disabled?: boolean;
+  size?: 'default' | 'standard' | 'small';
 }
 
 withDefaults(defineProps<Props>(), {
   title: 'Button',
   disabled: false,
+  size: 'default',
 });
 
 const emit = defineEmits(['click', 'mount', 'unmount']);
@@ -21,7 +23,7 @@ useOnMount(emit);
   <button
     type="button"
     class="guv-button"
-    :class="{ disabled: disabled }"
+    :class="{ disabled: disabled, standard: size === 'standard', small: size === 'small' }"
     :style="style"
     :disabled="disabled"
     @click="onClick(emit, $event)"
@@ -67,6 +69,16 @@ useOnMount(emit);
     &:hover {
       background: var(--bg-button, $bg-button);
     }
+  }
+
+  &.standard {
+    width: 55px;
+    height: 50px;
+  }
+
+  &.small {
+    width: 33px;
+    height: 30px;
   }
 }
 </style>

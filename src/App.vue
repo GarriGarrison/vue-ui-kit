@@ -11,6 +11,9 @@ import { GuvButton } from '.';
     </guv-button>
 
     <guv-button class="test" />
+
+    <guv-button size="standard" />
+    <guv-button size="small" />
   </div>
 </template>
 
