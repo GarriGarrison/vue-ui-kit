@@ -1,4 +1,4 @@
-import{r as g,M as f}from"./chunk-HLWAVYOI-8dc5e995.js";import{u as d}from"./index-3f02dbba.js";import"./iframe-e4c9a36e.js";import"../sb-preview/runtime.js";import"./index-eb485722.js";import"./index-d37d4223.js";import"./index-356e4a49.js";var x={exports:{}},s={};/**
+import{r as g,M as f}from"./chunk-HLWAVYOI-31ad41ce.js";import{u as d}from"./index-31cc0443.js";import"./iframe-078b185c.js";import"../sb-preview/runtime.js";import"./index-eb485722.js";import"./index-d37d4223.js";import"./index-356e4a49.js";var x={exports:{}},s={};/**
  * @license React
  * react-jsx-runtime.production.min.js
  *
@@ -6,7 +6,7 @@ import{r as g,M as f}from"./chunk-HLWAVYOI-8dc5e995.js";import{u as d}from"./ind
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */var u=g,h=Symbol.for("react.element"),_=Symbol.for("react.fragment"),k=Object.prototype.hasOwnProperty,b=u.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,y={key:!0,ref:!0,__self:!0,__source:!0};function c(t,e,a){var r,i={},p=null,l=null;a!==void 0&&(p=""+a),e.key!==void 0&&(p=""+e.key),e.ref!==void 0&&(l=e.ref);for(r in e)k.call(e,r)&&!y.hasOwnProperty(r)&&(i[r]=e[r]);if(t&&t.defaultProps)for(r in e=t.defaultProps,e)i[r]===void 0&&(i[r]=e[r]);return{$$typeof:h,type:t,key:p,ref:l,props:i,_owner:b.current}}s.Fragment=_;s.jsx=c;s.jsxs=c;x.exports=s;var o=x.exports;function m(t){const e=Object.assign({h1:"h1",p:"p"},d(),t.components);return o.jsxs(o.Fragment,{children:[o.jsx(f,{title:"Example/Introduction"}),`
+ */var u=g,h=Symbol.for("react.element"),_=Symbol.for("react.fragment"),b=Object.prototype.hasOwnProperty,k=u.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,y={key:!0,ref:!0,__self:!0,__source:!0};function c(e,t,a){var r,i={},p=null,l=null;a!==void 0&&(p=""+a),t.key!==void 0&&(p=""+t.key),t.ref!==void 0&&(l=t.ref);for(r in t)b.call(t,r)&&!y.hasOwnProperty(r)&&(i[r]=t[r]);if(e&&e.defaultProps)for(r in t=e.defaultProps,t)i[r]===void 0&&(i[r]=t[r]);return{$$typeof:h,type:e,key:p,ref:l,props:i,_owner:k.current}}s.Fragment=_;s.jsx=c;s.jsxs=c;x.exports=s;var o=x.exports;function m(e){const t=Object.assign({h1:"h1",p:"p"},d(),e.components);return o.jsxs(o.Fragment,{children:[o.jsx(f,{title:"About/Introduction"}),`
 `,o.jsx("style",{children:`
   .subheading {
     --mediumdark: '#999999';
@@ -110,6 +110,6 @@ import{r as g,M as f}from"./chunk-HLWAVYOI-8dc5e995.js";import{u as d}from"./ind
 
   
   `}),`
-`,o.jsx(e.h1,{id:"welcome-to-vue-ui-kit",children:"Welcome to VUE UI-kit"}),`
-`,o.jsx(e.p,{children:"This ui-kit is designed for the framework VUE3. Contains the main components."})]})}function w(t={}){const{wrapper:e}=Object.assign({},d(),t.components);return e?o.jsx(e,{...t,children:o.jsx(m,{...t})}):m(t)}const E=()=>{throw new Error("Docs-only story")};E.parameters={docsOnly:!0};const n={title:"Example/Introduction",tags:["stories-mdx"],includeStories:["__page"]};n.parameters=n.parameters||{};n.parameters.docs={...n.parameters.docs||{},page:w};const M=["__page"];export{M as __namedExportsOrder,E as __page,n as default};
-//# sourceMappingURL=Introduction.stories-390c18f2.js.map
+`,o.jsx(t.h1,{id:"welcome-to-vue-ui-kit",children:"Welcome to VUE UI-kit"}),`
+`,o.jsx(t.p,{children:"This ui-kit is designed for the framework VUE3. Contains the main components."})]})}function w(e={}){const{wrapper:t}=Object.assign({},d(),e.components);return t?o.jsx(t,{...e,children:o.jsx(m,{...e})}):m(e)}const E=()=>{throw new Error("Docs-only story")};E.parameters={docsOnly:!0};const n={title:"About/Introduction",tags:["stories-mdx"],includeStories:["__page"]};n.parameters=n.parameters||{};n.parameters.docs={...n.parameters.docs||{},page:w};const M=["__page"];export{M as __namedExportsOrder,E as __page,n as default};
+//# sourceMappingURL=Introduction.stories-f7e1fb17.js.map
