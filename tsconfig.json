@@ -38,7 +38,15 @@
       "@/*": ["./src/*"]
     }
   },
-  "exclude": ["src/**/*.stories.*", "src/stories"],
-  "include": ["vite.config.*", "env.d.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/components/button/guv-button.stories.ts"],
+  "exclude": ["src/**/*.stories.*", "src/stories", "src/**/*.spec.ts", "src/**/*.test.ts"],
+  "include": [
+    "vite.config.*",
+    "env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/components/button/guv-button.stories.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

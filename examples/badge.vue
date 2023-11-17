@@ -1,6 +1,5 @@
 <script setup lang="ts">
-// import { GuvBadge } from '@garrigarrison/vue-ui-kit';
-import { GuvBadge } from '.';
+import { GuvBadge } from '@garrigarrison/vue-ui-kit';
 </script>
 
 <template>
