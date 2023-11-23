@@ -46,3 +46,9 @@ export const DisabledStandard: Story = {
     size: 'standard',
   },
 };
+
+export const addStyle: Story = {
+  args: {
+    style: { backgroundColor: 'red', width: '100px' },
+  },
+};

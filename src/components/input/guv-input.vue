@@ -16,6 +16,7 @@ export interface Props extends CommonProps {
   max?: number;
   step?: number;
   focus?: boolean;
+  disabled?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -27,6 +28,7 @@ const props = withDefaults(defineProps<Props>(), {
   min: undefined,
   max: undefined,
   step: 0.01,
+  disabled: false,
 });
 
 const emit = defineEmits(['update:modelValue', 'keydown', 'input', 'focusin', 'focusout', 'mount', 'unmount']);
@@ -87,6 +89,7 @@ onMounted(() => {
     :step="integer ? '1' : step"
     :min="min"
     :max="max"
+    :disabled="disabled"
     @input="handleInput($event.target)"
     @focusin="onFocusin(emit)"
     @focusout="onFocusout(emit)"
