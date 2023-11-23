@@ -19,6 +19,7 @@ import { GuvButton } from '@garrigarrison/vue-ui-kit';
 <style scoped lang="scss">
 .wrapper {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 
   .img {

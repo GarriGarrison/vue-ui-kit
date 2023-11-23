@@ -15,18 +15,19 @@ export const onUnmount = (emit: UnmountEvent): void => {
   emit('unmount');
 };
 
-// export type Focusin = 'focusin';
-// export type FocusinEvent = (e: 'focusin') => void;
+export type Focusin = 'focusin';
+export type FocusinEvent = (e: Focusin) => void;
 
-// export const onFocusin = (emit: FocusinEvent): void => {
-//   emit('focusin');
-// };
+export const onFocusin = (emit: FocusinEvent): void => {
+  emit('focusin');
+};
 
-// export type Focusout = (e: 'focusout') => void;
+export type Focusout = 'focusout';
+export type FocusoutEvent = (e: Focusout) => void;
 
-// export const onFocusout = (emit: Focusout): void => {
-//   emit('focusout');
-// };
+export const onFocusout = (emit: FocusoutEvent): void => {
+  emit('focusout');
+};
 
 export type Click = 'click';
 export type ClickEvent = (e: Click, event: MouseEvent) => void;
@@ -35,11 +36,12 @@ export const onClick = (emit: ClickEvent, event: MouseEvent): void => {
   emit('click', event);
 };
 
-// export type Keydown = (e: 'keydown', event: KeyboardEvent) => void;
+export type Keydown = 'keydown';
+export type KeydownEvent = (e: Keydown, event: KeyboardEvent) => void;
 
-// export const onKeydown = (emit: Keydown, event: KeyboardEvent): void => {
-//   emit('keydown', event);
-// };
+export const onKeydown = (emit: KeydownEvent, event: KeyboardEvent): void => {
+  emit('keydown', event);
+};
 
 // export type Change<T> = (e: 'change', value: T) => void;
 
@@ -47,25 +49,24 @@ export const onClick = (emit: ClickEvent, event: MouseEvent): void => {
 //   emit('change', value);
 // };
 
-// export type ModelValueUpdated<T> = (e: 'model-value-updated', value: T) => void;
+export type Update = 'update:modelValue';
+export type UpdateEvent<T> = (e: Update, value: T) => void;
 
-// export type Update<T> = ((e: 'update:modelValue', value: T) => void) & ModelValueUpdated<T>;
+export const onUpdateModelValue = <T>(emit: UpdateEvent<T>, value: T): void => {
+  emit('update:modelValue', value);
+};
 
-// export const onUpdateModelValue = <T>(emit: Update<T>, value: T): void => {
-//   emit('update:modelValue', value);
-//   emit('model-value-updated', value);
-// };
+export type Input = 'input';
+export type InputEvent<T> = (e: Input, value: T) => void;
+
+export const onInput = <T>(emit: InputEvent<T>, value: T): void => {
+  emit('input', value);
+};
 
 // export type Search<T> = (e: 'search', query: T) => void;
 
 // export const onSearch = <T>(emit: Search<T>, query: T): void => {
 //   emit('search', query);
-// };
-
-// export type Input<T> = (e: 'input', value: T) => void;
-
-// export const onInput = <T>(emit: Input<T>, value: T): void => {
-//   emit('input', value);
 // };
 
 // export type FileAdd = (e: 'onFileAdd') => void;

@@ -1,25 +1,33 @@
 <script setup lang="ts">
-// import { GuvBadge } from '@garrigarrison/vue-ui-kit';
-import { GuvBadge } from '.';
+import { ref } from 'vue';
+// import { GuvInput } from '@garrigarrison/vue-ui-kit';
+import { GuvInput } from '.';
+
+const text = ref<string>();
+const num = ref<number>();
+const ups = ref();
 </script>
 
 <template>
   <div class="wrapper">
-    <guv-badge :counter="5" />
+    <guv-input v-model="text" />
 
-    <guv-badge :counter="{ count: 4, mode: 0 }" />
+    <guv-input v-model.number="num" type="number" />
 
-    <guv-badge :counter="{ count: 3, mode: 1 }" />
+    <guv-input v-model="text" disabled />
 
-    <guv-badge :counter="2" :style="{ backgroundColor: 'blue' }" />
+    <guv-input v-model="ups" invalid />
 
-    <guv-badge :counter="5" class="test" />
+    <guv-input v-model="text" :style="{ backgroundColor: 'beige' }" />
+
+    <guv-input v-model="text" class="test" />
   </div>
 </template>
 
 <style scoped lang="scss">
 .wrapper {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 
   .img {

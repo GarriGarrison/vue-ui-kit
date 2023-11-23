@@ -65,7 +65,8 @@
         "htmlWhitespaceSensitivity": "ignore",
         "arrowParens": "always"
       }
-    ]
+    ],
+    "vue/no-parsing-error": "off"
   },
   "settings": {
     "import/resolver": {
