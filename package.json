@@ -69,7 +69,7 @@
     "*": "prettier -w -u"
   },
   "dependencies": {
-    "@garrigarrison/vue-ui-kit": "^0.3.0",
+    "@garrigarrison/vue-ui-kit": "^0.0.4",
     "vue": "^3.3.8"
   },
   "devDependencies": {
@@ -83,7 +83,7 @@
     "@storybook/vue3": "^7.5.3",
     "@storybook/vue3-vite": "^7.5.3",
     "@total-typescript/ts-reset": "^0.5.1",
-    "@types/node": "^20.9.4",
+    "@types/node": "^20.10.0",
     "@typescript-eslint/eslint-plugin": "^6.12.0",
     "@typescript-eslint/parser": "^6.12.0",
     "@vitejs/plugin-vue": "^4.5.0",
