@@ -27,7 +27,7 @@ const props = withDefaults(defineProps<Props>(), {
   integer: false,
   min: undefined,
   max: undefined,
-  step: 0.01,
+  step: undefined,
   disabled: false,
 });
 
@@ -83,7 +83,7 @@ onMounted(() => {
     :value="modelValue"
     :type="type"
     class="guv-input"
-    :class="{ error: invalid && !modelValue }"
+    :class="{ error: invalid && !modelValue, disabled: disabled }"
     :style="style"
     :placeholder="placeholder"
     :step="integer ? '1' : step"
@@ -122,7 +122,7 @@ onMounted(() => {
     outline: none;
   }
 
-  &:disabled {
+  &.disabled {
     border-color: var(--border-disabled, $border-disabled);
     opacity: 0.6;
     pointer-events: none;
