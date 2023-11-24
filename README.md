@@ -21,7 +21,7 @@ npm install @garrigarrison/vue-ui-kit
 
 ## 🌈 🎨 Storybook
 
-Open [Storybook](https://ant.design/docs/react/contributing) to view components
+Open [Storybook](https://garrigarrison.github.io/vue-ui-kit/?path=/docs/about-introduction--docs) to view components
 
 ## ⚙️ Recommended IDE Setup
 
