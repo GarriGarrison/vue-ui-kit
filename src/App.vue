@@ -16,7 +16,7 @@ const ups = ref();
 
     <guv-input v-model.number="num" :mask="/^\d+$/" placeholder="mask" />
 
-    <guv-input v-model="text" disabled />
+    <guv-input v-model="text" disabled placeholder="disabled" />
 
     <guv-input v-model="ups" invalid />
 
