@@ -21,40 +21,6 @@ describe('Button', () => {
     expect(wrapper.props('modelValue')).toBe('New Test Value');
   });
 
-  // it('Emits input value number', async () => {
-  //   expect(Input).toBeTruthy();
-
-  //   const wrapper = mount(Input, {
-  //     props: {
-  //       modelValue: 5,
-  //       'onUpdate:modelValue': (e) => wrapper.setProps({ modelValue: e }),
-  //       integer: false,
-  //     },
-  //   });
-
-  //   // const myEvent = new KeyboardEvent('keydown', { key: 'a' });
-  //   // vi.spyOn(myEvent, 'preventDefault');
-  //   // await wrapper.find('input').element.dispatchEvent(myEvent);
-  //   // await nextTick();
-  //   // console.log('res', wrapper.props('modelValue'));
-  //   // expect(myEvent.preventDefault.calledOnce).to.equal(true);
-
-  //   await wrapper.trigger('click');
-  //   wrapper.trigger('keypress', { key: 'a' });
-  //   // // await wrapper.vm.$nextTick();
-  //   console.log('res', wrapper.props('modelValue'));
-
-  //   // // await wrapper.find('input').setValue('New Test Value');
-  //   // // expect(wrapper.props('modelValue')).toBe('New Test Value');
-
-  //   // // await nextTick();
-  //   // // expect(wrapper.props('modelValue')).toBe('7');
-  //   // expect(wrapper.vm.quantity).toBe(13);
-
-  //   // await wrapper.trigger('keydown', { key: '7' });
-  //   // expect(wrapper.props('modelValue')).toBe('7');
-  // });
-
   it('Placeholder', () => {
     expect(Input).toBeTruthy();
 

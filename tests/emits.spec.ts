@@ -8,38 +8,116 @@ import {
   onKeydown,
   onUpdateModelValue,
   onInput,
+  type Mount,
+  type Unmount,
+  type Focusin,
+  type Focusout,
+  type Click,
+  type Keydown,
+  type Update,
+  type Input,
 } from '../src/common/mixin/emits';
 
 describe('Hooks emit', () => {
+  const events = {};
+
   it('onMount', () => {
-    expect(onMount(() => {})).toBe(undefined);
+    const expected: Mount = 'mount';
+
+    const emit = (event, ...args): void => {
+      events[event] = [...args];
+
+      expect(event).toBe(expected);
+    };
+
+    onMount(emit);
   });
 
   it('onUnmount', () => {
-    expect(onUnmount(() => {})).toBe(undefined);
+    const expected: Unmount = 'unmount';
+
+    const emit = (event, ...args): void => {
+      events[event] = [...args];
+
+      expect(event).toBe(expected);
+    };
+
+    onUnmount(emit);
   });
 
   it('onFocusin', () => {
-    expect(onFocusin(() => {})).toBe(undefined);
+    const expected: Focusin = 'focusin';
+
+    const emit = (event, ...args): void => {
+      events[event] = [...args];
+
+      expect(event).toBe(expected);
+    };
+
+    onFocusin(emit);
   });
 
   it('onFocusout', () => {
-    expect(onFocusout(() => {})).toBe(undefined);
+    const expected: Focusout = 'focusout';
+
+    const emit = (event, ...args): void => {
+      events[event] = [...args];
+
+      expect(event).toBe(expected);
+    };
+
+    onFocusout(emit);
   });
 
   it('onClick', () => {
-    expect(onClick(() => {}, 'click' as unknown as MouseEvent)).toBe(undefined);
+    const expected: Click = 'click';
+
+    const emit = (event, ...args): void => {
+      events[event] = [...args];
+
+      expect(event).toBe(expected);
+      expect(events[event]).toEqual(['mouse clicked']);
+    };
+
+    onClick(emit, 'mouse clicked' as unknown as MouseEvent);
   });
 
   it('onKeydown', () => {
-    expect(onKeydown(() => {}, 'keydown' as unknown as KeyboardEvent)).toBe(undefined);
+    const expected: Keydown = 'keydown';
+
+    const emit = (event, ...args): void => {
+      events[event] = [...args];
+
+      expect(event).toBe(expected);
+      expect(events[event]).toEqual(['keydown clicked']);
+    };
+
+    onKeydown(emit, 'keydown clicked' as unknown as KeyboardEvent);
   });
 
   it('onUpdateModelValue', () => {
-    expect(onUpdateModelValue(() => {}, 'update:modelValue' as unknown)).toBe(undefined);
+    const expected: Update = 'update:modelValue';
+
+    const emit = (event, ...args): void => {
+      events[event] = [...args];
+
+      expect(event).toBe(expected);
+      expect(events[event]).toEqual(['update modelValue']);
+    };
+
+    onUpdateModelValue(emit, 'update modelValue' as unknown);
   });
 
   it('onInput', () => {
-    expect(onInput(() => {}, 'input' as unknown)).toBe(undefined);
+    const expected: Input = 'input';
+
+    const emit = (event, ...args): void => {
+      events[event] = [...args];
+
+      expect(event).toBe(expected);
+      expect(events[event]).toEqual(['input value']);
+    };
+
+    onInput(emit, 'input value' as unknown);
   });
 });
