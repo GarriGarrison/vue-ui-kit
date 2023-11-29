@@ -39,11 +39,11 @@ useOnMount(emit);
   width: 30px;
   height: 30px;
   padding: 3px;
-  color: $secondary;
+  color: $guv-secondary;
   font-weight: 600;
   font-size: 16px;
   line-height: 1;
-  background-color: $accent-red;
+  background-color: $guv-accent-red;
   border: none;
   border-radius: 50%;
 }

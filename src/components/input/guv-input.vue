@@ -103,13 +103,13 @@ onMounted(() => {
 .guv-input {
   box-sizing: border-box;
   max-width: 100%;
-  padding: $p-input;
-  color: var(--text, $text);
+  padding: $guv-p-input;
+  color: var(--text, $guv-text);
   font-size: 1rem;
-  background-color: var(--bg-input, $bg-input);
+  background-color: var(--bg-input, $guv-bg-input);
   border: 1px solid transparent;
-  border-color: var(--border, $border);
-  border-radius: var(--border-radius, $border-radius);
+  border-color: var(--guv-border, $guv-border);
+  border-radius: var(--guv-border-radius, $guv-border-radius);
   transition: background 0.2s;
   transition:
     color 0.1s ease,
@@ -118,19 +118,19 @@ onMounted(() => {
 
   &:focus,
   :focus-visible {
-    border-color: var(--border-focus, $border-focus);
+    border-color: var(--guv-border-focus, $guv-border-focus);
     outline: none;
   }
 
   &.disabled {
-    border-color: var(--border-disabled, $border-disabled);
+    border-color: var(--guv-border-disabled, $guv-border-disabled);
     opacity: 0.6;
     pointer-events: none;
   }
 
   &.error {
     border: 2px solid transparent;
-    border-color: var(--border-error, $border-error);
+    border-color: var(--guv-border-error, $guv-border-error);
   }
 }
 </style>

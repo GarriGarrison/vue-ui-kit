@@ -44,16 +44,16 @@ useOnMount(emit);
   padding: 0.5rem 1rem;
   color: var(--text);
   font-size: 1rem;
-  background-color: var(--bg-button, $bg-button);
+  background-color: var(--guv-bg-button, $guv-bg-button);
   border: 1px solid transparent;
-  border-color: var(--border, $border);
-  border-radius: var(--border-radius, $border-radius);
+  border-color: var(--guv-border, $guv-border);
+  border-radius: var(--guv-border-radius, $guv-border-radius);
   cursor: pointer;
   text-rendering: auto;
   transition: background 0.2s;
 
   &:hover {
-    background: var(--bg-hover, $bg-hover);
+    background: var(--guv-bg-hover, $guv-bg-hover);
   }
 
   &:focus,
@@ -62,12 +62,12 @@ useOnMount(emit);
   }
 
   &.disabled {
-    border-color: var(--border-disabled, $border-disabled);
+    border-color: var(--guv-border-disabled, $guv-border-disabled);
     opacity: 0.4;
     pointer-events: none;
 
     &:hover {
-      background: var(--bg-button, $bg-button);
+      background: var(--guv-bg-button, $guv-bg-button);
     }
   }
 

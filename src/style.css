@@ -5,9 +5,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
 
-  --border: red;
-  --bg-hover: green;
-  --border-focus: blue;
+  --guv-border: red;
+  --guv-bg-hover: green;
+  --guv-border-focus: blue;
 }
 
 body {
