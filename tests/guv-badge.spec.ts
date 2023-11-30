@@ -1,6 +1,6 @@
-import { mount } from '@vue/test-utils';
+import { mount, shallowMount } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
-import Badge from './guv-badge.vue';
+import { GuvBadge as Badge } from '../src/index';
 
 describe('Button', () => {
   /**
@@ -112,5 +112,17 @@ describe('Button', () => {
     });
     wrapper.unmount();
     expect(wrapper.emitted()).toHaveProperty('unmount');
+  });
+
+  it.todo('Snap shot matches', () => {
+    expect(Badge).toBeTruthy();
+
+    const wrapper = shallowMount(Badge, {
+      props: {
+        counter: 1,
+      },
+    });
+
+    expect(wrapper.element).toMatchSnapshot();
   });
 });

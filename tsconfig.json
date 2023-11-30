@@ -47,6 +47,6 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/components/button/guv-button.stories.ts"
-  ],
+, "tests/*.spec.ts"  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

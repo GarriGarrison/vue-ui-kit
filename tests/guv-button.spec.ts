@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
-import Button from './guv-button.vue';
+import { GuvButton as Button } from '../src/index';
 
 describe('Button', () => {
   /**
@@ -125,4 +125,16 @@ describe('Button', () => {
     wrapper.trigger('click');
     expect(wrapper.emitted()).not.toHaveProperty('click');
   });
+
+  // it('Snap shot matches', () => {
+  //   expect(Button).toBeTruthy();
+
+  //   const wrapper = mount(Button, {
+  //     props: {
+  //       title: 'Click me',
+  //     },
+  //   });
+
+  //   expect(wrapper).toMatchSnapshot();
+  // });
 });
