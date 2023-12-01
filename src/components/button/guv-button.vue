@@ -21,6 +21,7 @@ useOnMount(emit);
 
 <template>
   <button
+    :id="id"
     type="button"
     class="guv-button"
     :class="{ disabled: disabled, standard: size === 'standard', small: size === 'small' }"

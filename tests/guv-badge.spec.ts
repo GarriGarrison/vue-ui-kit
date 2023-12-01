@@ -56,6 +56,19 @@ describe('Button', () => {
     expect(wrapper.html()).not.toContain(0);
   });
 
+  it('Id -> add', () => {
+    expect(Badge).toBeTruthy();
+
+    const wrapper = mount(Badge, {
+      props: {
+        counter: 2,
+        id: 'super_id',
+      },
+    });
+
+    expect(wrapper.element.id).toBe('super_id');
+  });
+
   it('Classes -> main', () => {
     expect(Badge).toBeTruthy();
 

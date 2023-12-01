@@ -1,7 +1,7 @@
 import { nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
-import Input from './guv-input.vue';
+import { GuvInput as Input } from '../src/index';
 
 describe('Button', () => {
   /**
@@ -60,6 +60,19 @@ describe('Button', () => {
     await nextTick();
 
     expect(wrapper.element).toBe(document.activeElement);
+  });
+
+  it('Id -> add', () => {
+    expect(Input).toBeTruthy();
+
+    const wrapper = mount(Input, {
+      props: {
+        modelValue: '',
+        id: 'super_id',
+      },
+    });
+
+    expect(wrapper.element.id).toBe('super_id');
   });
 
   it('Classes -> main', () => {

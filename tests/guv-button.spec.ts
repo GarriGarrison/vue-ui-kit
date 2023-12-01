@@ -59,6 +59,33 @@ describe('Button', () => {
     expect(wrapper.classes()).toContain('small');
   });
 
+  it('Disabled', () => {
+    expect(Button).toBeTruthy();
+
+    const wrapper = mount(Button, {
+      props: {
+        disabled: true,
+      },
+    });
+
+    expect(wrapper.classes()).toContain('disabled');
+
+    wrapper.trigger('click');
+    expect(wrapper.emitted()).not.toHaveProperty('click');
+  });
+
+  it('Id -> add', () => {
+    expect(Button).toBeTruthy();
+
+    const wrapper = mount(Button, {
+      props: {
+        id: 'super_id',
+      },
+    });
+
+    expect(wrapper.element.id).toBe('super_id');
+  });
+
   it('Classes -> main', () => {
     expect(Button).toBeTruthy();
 
@@ -110,31 +137,4 @@ describe('Button', () => {
     wrapper.trigger('click');
     expect(wrapper.emitted()).toHaveProperty('click');
   });
-
-  it('Disabled', () => {
-    expect(Button).toBeTruthy();
-
-    const wrapper = mount(Button, {
-      props: {
-        disabled: true,
-      },
-    });
-
-    expect(wrapper.classes()).toContain('disabled');
-
-    wrapper.trigger('click');
-    expect(wrapper.emitted()).not.toHaveProperty('click');
-  });
-
-  // it('Snap shot matches', () => {
-  //   expect(Button).toBeTruthy();
-
-  //   const wrapper = mount(Button, {
-  //     props: {
-  //       title: 'Click me',
-  //     },
-  //   });
-
-  //   expect(wrapper).toMatchSnapshot();
-  // });
 });

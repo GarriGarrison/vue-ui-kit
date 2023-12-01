@@ -1,28 +1,20 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-// import { GuvInput } from '@garrigarrison/vue-ui-kit';
-import { GuvInput } from '.';
-
-const text = ref<string>();
-const num = ref<number>();
-const ups = ref();
+import { GuvView } from '.';
 </script>
 
 <template>
   <div class="wrapper">
-    <guv-input v-model="text" />
+    <guv-view element="div">Hello from view DIV</guv-view>
 
-    <guv-input v-model.number="num" type="number" />
+    <guv-view element="span">Hello from view SPAN</guv-view>
 
-    <guv-input v-model.number="num" :mask="/^\d+$/" placeholder="mask" />
+    <guv-view element="div" disabled>Hello from view DISABLED</guv-view>
 
-    <guv-input v-model="text" disabled placeholder="disabled" />
+    <guv-view element="div" :style="{ backgroundColor: 'beige' }">Hello from view STYLE</guv-view>
 
-    <guv-input v-model="ups" invalid />
+    <guv-view id="id" element="div" class="test">Hello from view CLASS</guv-view>
 
-    <guv-input v-model="text" :style="{ backgroundColor: 'beige' }" />
-
-    <guv-input v-model="text" class="test" />
+    <guv-view element="div" aria-label="aria-teg" class="test">Hello from view ARIA</guv-view>
   </div>
 </template>
 

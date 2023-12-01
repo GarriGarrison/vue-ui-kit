@@ -79,6 +79,7 @@ onMounted(() => {
 
 <template>
   <input
+    :id="id"
     ref="inputRef"
     :value="modelValue"
     :type="type"

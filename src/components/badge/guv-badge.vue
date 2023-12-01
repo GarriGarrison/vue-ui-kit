@@ -20,10 +20,10 @@ useOnMount(emit);
 </script>
 
 <template>
-  <div v-if="isNum && counter" class="guv-badge" :style="style">
+  <div v-if="isNum && counter" :id="id" class="guv-badge" :style="style">
     {{ counter }}
   </div>
-  <div v-else-if="countObj.count" class="guv-badge" :class="{ pulse: countObj.mode === 1 }" :style="style">
+  <div v-else-if="countObj.count" :id="id" class="guv-badge" :class="{ pulse: countObj.mode === 1 }" :style="style">
     {{ countObj.count }}
   </div>
 </template>
