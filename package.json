@@ -47,7 +47,7 @@
     "lint:fix": "eslint ./src/** --fix",
     "lint:style": "stylelint src/**/*.{css,scss,vue}",
     "lint:markup": "vue-tsc --noEmit",
-    "test:old": "vitest run --coverage.enabled --coverage.lines=50",
+    "test": "vitest run --coverage.enabled --coverage.lines=50",
     "test-coverage": "vitest --coverage",
     "test-ui": "npx vitest --ui",
     "test:unit": "vitest --environment jsdom",
