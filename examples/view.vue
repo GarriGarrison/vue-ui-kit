@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { GuvView } from '.';
+import { GuvView } from '@garrigarrison/vue-ui-kit';
 
 const handleClick = (): void => {
   alert('Hello!');
