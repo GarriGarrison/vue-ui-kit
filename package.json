@@ -56,8 +56,8 @@
     "prepare": "husky install",
     "dell": "rm dist/vite.config.d.ts && rm dist/vite.svg && rm dist/types/App.vue.d.ts && rm dist/types/main.d.ts && rimraf dist/types/common",
     "storybook": "storybook dev",
-    "build-storybook": "storybook build",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "storybook:build": "rimraf storybook-static && storybook build && touch ./storybook-static/.nojekyll",
+    "storybook:deploy": "npm run storybook:build && gh-pages -d storybook-static"
   },
   "husky": {
     "hooks": {
@@ -70,19 +70,19 @@
     "*": "prettier -w -u"
   },
   "dependencies": {
-    "vue": "^3.3.10"
+    "vue": "^3.3.11"
   },
   "devDependencies": {
     "@babel/core": "^7.23.5",
     "@garrigarrison/vue-ui-kit": "^0.4.0",
     "@mapbox/stylelint-processor-arbitrary-tags": "^0.4.0",
-    "@storybook/addon-actions": "^7.6.3",
-    "@storybook/addon-essentials": "^7.6.3",
-    "@storybook/addon-links": "^7.6.3",
-    "@storybook/addon-mdx-gfm": "^7.6.3",
-    "@storybook/cli": "^7.6.3",
-    "@storybook/vue3": "^7.6.3",
-    "@storybook/vue3-vite": "^7.6.3",
+    "@storybook/addon-actions": "^7.6.4",
+    "@storybook/addon-essentials": "^7.6.4",
+    "@storybook/addon-links": "^7.6.4",
+    "@storybook/addon-mdx-gfm": "^7.6.4",
+    "@storybook/cli": "^7.6.4",
+    "@storybook/vue3": "^7.6.4",
+    "@storybook/vue3-vite": "^7.6.4",
     "@testing-library/vue": "^8.0.1",
     "@total-typescript/ts-reset": "^0.5.1",
     "@types/node": "^20.10.4",
@@ -110,7 +110,7 @@
     "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
     "sass": "^1.69.5",
-    "storybook": "^7.6.3",
+    "storybook": "^7.6.4",
     "stylelint": "^15.11.0",
     "stylelint-config-css-modules": "^4.3.0",
     "stylelint-config-prettier-scss": "^1.0.0",
