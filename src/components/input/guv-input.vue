@@ -52,8 +52,6 @@ const handleInput = (element: EventTarget | null): void => {
 const handleKeydown = (event: KeyboardEvent): void => {
   onKeydown(emit, event);
 
-  if (event.key === 'Backspace' || event.key == 'Delete') return;
-
   if (props.mask && !props.mask.test(event.key)) {
     event.preventDefault();
   }

@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/prefer-ts-expect-error */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, expect, it } from 'vitest';
+import sinon from 'sinon';
 import { GuvInput as Input } from '../src/index';
 
 describe('Button', () => {
@@ -19,6 +22,42 @@ describe('Button', () => {
 
     await wrapper.find('input').setValue('New Test Value');
     expect(wrapper.props('modelValue')).toBe('New Test Value');
+  });
+
+  it('Mask input', async () => {
+    expect(Input).toBeTruthy();
+
+    const wrapper = mount(Input, {
+      props: {
+        modelValue: 'Test Value',
+        mask: /\d/,
+      },
+    });
+
+    const myEvent = new KeyboardEvent('keydown', { key: 'a' });
+    sinon.spy(myEvent, 'preventDefault');
+
+    await wrapper.find('input').element.dispatchEvent(myEvent);
+    // @ts-ignore
+    expect(myEvent.preventDefault.calledOnce).to.equal(true);
+  });
+
+  it('Integer input', async () => {
+    expect(Input).toBeTruthy();
+
+    const wrapper = mount(Input, {
+      props: {
+        modelValue: 'Test Value',
+        integer: true,
+      },
+    });
+
+    const myEvent = new KeyboardEvent('keydown', { key: 'z' });
+    sinon.spy(myEvent, 'preventDefault');
+
+    await wrapper.find('input').element.dispatchEvent(myEvent);
+    // @ts-ignore
+    expect(myEvent.preventDefault.calledOnce).to.equal(true);
   });
 
   it('Placeholder', () => {
