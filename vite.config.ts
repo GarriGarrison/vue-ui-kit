@@ -38,6 +38,7 @@ export default defineConfig({
     coverage: {
       exclude: [
         'examples/**',
+        'storybook-static/**',
         '**/*.stories.ts',
         '**/*.d.ts',
         'postcss.config.js',
