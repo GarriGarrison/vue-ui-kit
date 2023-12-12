@@ -47,6 +47,7 @@ export const Checked: Story = {
 
 export const addStyle: Story = {
   args: {
+    title: 'Background Color',
     style: { backgroundColor: 'beige' },
   },
 };
