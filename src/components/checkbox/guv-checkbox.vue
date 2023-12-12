@@ -91,6 +91,8 @@ $background-img: url('./assets/check-mark.svg');
 $background-img-minus: url('./assets/minus-icon.svg');
 
 .guv-checkbox {
+  width: fit-content;
+
   &__item {
     display: flex;
     align-items: center;
