@@ -1,19 +1,11 @@
 {
   "processors": [["@mapbox/stylelint-processor-arbitrary-tags"]],
   "extends": [
-    "stylelint-config-recommended",
-    "stylelint-config-standard",
-    "stylelint-config-recommended-scss",
     "stylelint-config-standard-scss",
-    "stylelint-config-prettier-scss",
-    "stylelint-prettier/recommended",
-    "stylelint-config-recommended-vue",
-    "stylelint-config-css-modules",
-    "stylelint-config-recess-order"
+     "stylelint-config-recommended-vue"
   ],
   "plugins": ["stylelint-order", "stylelint-scss", "stylelint-config-rational-order/plugin"],
   "rules": {
-    "no-empty-first-line": null,
     "no-empty-source": null,
     "color-function-notation": "legacy",
     "media-feature-range-notation": "prefix",

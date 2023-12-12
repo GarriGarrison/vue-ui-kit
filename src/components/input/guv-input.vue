@@ -103,9 +103,9 @@ onMounted(() => {
   box-sizing: border-box;
   max-width: 100%;
   padding: $guv-p-input;
-  color: var(--text, $guv-text);
+  color: var(--guv-text, $guv-text);
   font-size: 1rem;
-  background-color: var(--bg-input, $guv-bg-input);
+  background-color: var(--guv-bg-input, $guv-bg-input);
   border: 1px solid transparent;
   border-color: var(--guv-border, $guv-border);
   border-radius: var(--guv-border-radius, $guv-border-radius);
