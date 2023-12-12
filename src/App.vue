@@ -1,26 +1,24 @@
 <script setup lang="ts">
-import { GuvView } from '.';
+import { ref } from 'vue';
+import { GuvCheckbox } from '.';
 
-const handleClick = (): void => {
-  alert('Hello!');
+const handleCheck = (): void => {
+  if (check2.value) {
+    alert('Hello! Check');
+  }
 };
+
+const check = ref(true);
+const check2 = ref();
 </script>
 
 <template>
   <div class="wrapper">
-    <guv-view element="div">Hello from view DIV</guv-view>
+    <guv-checkbox v-model="check" title="Check me" minus-icon />
 
-    <guv-view element="span">Hello from view SPAN</guv-view>
+    <guv-checkbox v-model="check2" title="Check me F" checked />
 
-    <guv-view element="div" disabled>Hello from view DISABLED</guv-view>
-
-    <guv-view element="div" :style="{ backgroundColor: 'beige' }">Hello from view STYLE</guv-view>
-
-    <guv-view id="id" element="div" class="test">Hello from view CLASS</guv-view>
-
-    <guv-view element="div" aria-label="aria-teg" class="test">Hello from view ARIA</guv-view>
-
-    <guv-view element="div" :style="{ backgroundColor: 'lime' }" @click="handleClick">Click Me</guv-view>
+    <guv-checkbox v-model="check2" title="Check me F" @change="handleCheck" />
   </div>
 </template>
 

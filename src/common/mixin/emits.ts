@@ -43,17 +43,18 @@ export const onKeydown = (emit: KeydownEvent, event: KeyboardEvent): void => {
   emit('keydown', event);
 };
 
-// export type Change<T> = (e: 'change', value: T) => void;
-
-// export const onChange = <T>(emit: Change<T>, value: T): void => {
-//   emit('change', value);
-// };
-
 export type Update = 'update:modelValue';
 export type UpdateEvent<T> = (e: Update, value: T) => void;
 
 export const onUpdateModelValue = <T>(emit: UpdateEvent<T>, value: T): void => {
   emit('update:modelValue', value);
+};
+
+export type Change = 'change';
+export type ChangeEvent<T> = (e: Change, value: T) => void;
+
+export const onChange = <T>(emit: ChangeEvent<T>, value: T): void => {
+  emit('change', value);
 };
 
 export type Input = 'input';
