@@ -14,6 +14,7 @@ describe('Button', () => {
         counter: 5,
       },
     });
+
     expect(wrapper.html()).toContain(5);
   });
 
@@ -28,6 +29,7 @@ describe('Button', () => {
         },
       },
     });
+
     expect(wrapper.html()).toContain(3);
   });
 
@@ -42,6 +44,7 @@ describe('Button', () => {
         },
       },
     });
+
     expect(wrapper.html()).toContain(2);
   });
 
@@ -53,6 +56,7 @@ describe('Button', () => {
         counter: 0,
       },
     });
+
     expect(wrapper.html()).not.toContain(0);
   });
 
@@ -77,6 +81,7 @@ describe('Button', () => {
         counter: 1,
       },
     });
+
     expect(wrapper.classes()).toContain('guv-badge');
   });
 
@@ -89,6 +94,7 @@ describe('Button', () => {
         class: 'test',
       },
     });
+
     expect(wrapper.classes()).toContain('test');
   });
 
@@ -101,6 +107,7 @@ describe('Button', () => {
         style: { backgroundColor: 'green' },
       },
     });
+
     expect(wrapper.attributes().style).toContain('background-color: green;');
   });
 
@@ -112,6 +119,7 @@ describe('Button', () => {
         counter: 1,
       },
     });
+
     expect(wrapper.emitted()).toHaveProperty('mount');
   });
 
@@ -123,6 +131,7 @@ describe('Button', () => {
         counter: 1,
       },
     });
+
     wrapper.unmount();
     expect(wrapper.emitted()).toHaveProperty('unmount');
   });

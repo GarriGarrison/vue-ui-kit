@@ -14,6 +14,7 @@ describe('Button', () => {
         title: 'Click me',
       },
     });
+
     expect(wrapper.html()).toContain('Click me');
   });
 
@@ -33,6 +34,7 @@ describe('Button', () => {
         after: '<div>After</div>',
       },
     });
+
     expect(wrapper.html()).toContain('Before');
     expect(wrapper.html()).toContain('<div>After</div>');
   });
@@ -45,6 +47,7 @@ describe('Button', () => {
         size: 'standard',
       },
     });
+
     expect(wrapper.classes()).toContain('standard');
   });
 
@@ -56,6 +59,7 @@ describe('Button', () => {
         size: 'small',
       },
     });
+
     expect(wrapper.classes()).toContain('small');
   });
 
@@ -101,6 +105,7 @@ describe('Button', () => {
         class: 'test',
       },
     });
+
     expect(wrapper.classes()).toContain('test');
   });
 

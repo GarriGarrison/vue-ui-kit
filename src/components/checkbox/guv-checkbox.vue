@@ -11,6 +11,7 @@ export interface Props extends CommonProps {
   title?: string;
   valueField?: string;
   minusIcon?: boolean;
+  disabled?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -18,6 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
   title: '',
   valueField: 'value',
   minusIcon: false,
+  disabled: false,
 });
 
 const emit = defineEmits(['update:modelValue', 'change', 'click', 'focusin', 'focusout', 'mount', 'unmount']);
@@ -57,7 +59,14 @@ onMount(() => {
 </script>
 
 <template>
-  <div class="guv-checkbox" @click.stop>
+  <div
+    :id="idx"
+    class="guv-checkbox"
+    :style="style"
+    @click.stop
+    @focusout="onFocusout(emit)"
+    @focusin="onFocusin(emit)"
+  >
     <input
       :id="`guv-checkbox-${idx}`"
       :checked="check"
@@ -65,12 +74,11 @@ onMount(() => {
       class="guv-checkbox__input"
       tabindex="0"
       type="checkbox"
+      :disabled="disabled"
       @change="handleChange($event.target)"
-      @focusout="onFocusout(emit)"
-      @focusin="onFocusin(emit)"
     />
-    <label :for="`guv-checkbox-${idx}`" :class="{ minus: minusView }">
-      {{ title ?? id }}
+    <label :for="`guv-checkbox-${idx}`" :class="{ minus: minusView, disabled: disabled }">
+      {{ title }}
     </label>
   </div>
 </template>
@@ -121,6 +129,11 @@ $background-img-minus: url('./assets/minus-icon.svg');
           background-size: 120%;
         }
       }
+
+      &.disabled {
+        opacity: 0.6;
+        pointer-events: none;
+      }
     }
 
     &:checked + label {
@@ -132,6 +145,8 @@ $background-img-minus: url('./assets/minus-icon.svg');
 
     &:disabled + label:before {
       background-color: var(--border-disabled, $guv-border-disabled);
+      opacity: 0.6;
+      pointer-events: none;
     }
 
     &:not(:disabled) {

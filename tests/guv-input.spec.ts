@@ -69,6 +69,7 @@ describe('Button', () => {
         placeholder: 'Placeholder Input',
       },
     });
+
     expect(wrapper.html()).toContain('Placeholder Input');
   });
 
@@ -97,8 +98,23 @@ describe('Button', () => {
     });
 
     await nextTick();
-
     expect(wrapper.element).toBe(document.activeElement);
+  });
+
+  it('Disabled', () => {
+    expect(Input).toBeTruthy();
+
+    const wrapper = mount(Input, {
+      props: {
+        modelValue: '',
+        disabled: true,
+      },
+    });
+
+    expect(wrapper.classes()).toContain('disabled');
+
+    wrapper.trigger('focusin');
+    expect(wrapper.emitted()).not.toHaveProperty('focusin');
   });
 
   it('Id -> add', () => {
@@ -130,6 +146,7 @@ describe('Button', () => {
         class: 'test',
       },
     });
+
     expect(wrapper.classes()).toContain('test');
   });
 
@@ -142,6 +159,7 @@ describe('Button', () => {
         style: { paddingTop: '10px' },
       },
     });
+
     expect(wrapper.attributes().style).toContain('padding-top: 10px;');
   });
 
@@ -190,21 +208,5 @@ describe('Button', () => {
     const wrapper = mount(Input);
     wrapper.trigger('keydown');
     expect(wrapper.emitted()).toHaveProperty('keydown');
-  });
-
-  it('Disabled', () => {
-    expect(Input).toBeTruthy();
-
-    const wrapper = mount(Input, {
-      props: {
-        modelValue: '',
-        disabled: true,
-      },
-    });
-
-    expect(wrapper.classes()).toContain('disabled');
-
-    wrapper.trigger('focusin');
-    expect(wrapper.emitted()).not.toHaveProperty('focusin');
   });
 });

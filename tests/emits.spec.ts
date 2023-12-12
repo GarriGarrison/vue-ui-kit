@@ -8,6 +8,7 @@ import {
   onKeydown,
   onUpdateModelValue,
   onInput,
+  onChange,
   type Mount,
   type Unmount,
   type Focusin,
@@ -16,6 +17,7 @@ import {
   type Keydown,
   type Update,
   type Input,
+  type Change,
 } from '../src/common/mixin/emits';
 
 describe('Hooks emit', () => {
@@ -106,6 +108,19 @@ describe('Hooks emit', () => {
     };
 
     onUpdateModelValue(emit, 'update modelValue' as unknown);
+  });
+
+  it('onChange', () => {
+    const expected: Change = 'change';
+
+    const emit = (event, ...args): void => {
+      events[event] = [...args];
+
+      expect(event).toBe(expected);
+      expect(events[event]).toEqual(['change value']);
+    };
+
+    onChange(emit, 'change value' as unknown);
   });
 
   it('onInput', () => {

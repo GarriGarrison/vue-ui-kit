@@ -54,7 +54,6 @@ describe('View', () => {
     });
 
     const view = await screen.findByText('View');
-
     expect(view.getAttribute('aria-label')).toBe('aria-tag');
   });
 
@@ -70,7 +69,6 @@ describe('View', () => {
     });
 
     const view = await screen.findByText('View id');
-
     expect(view.getAttribute('id')).toBe('super_id');
   });
 

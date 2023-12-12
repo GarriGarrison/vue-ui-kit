@@ -8,17 +8,24 @@ const handleCheck = (): void => {
   }
 };
 
-const check = ref(true);
+const check = ref(false);
 const check2 = ref();
+const check3 = ref(true);
 </script>
 
 <template>
   <div class="wrapper">
     <guv-checkbox v-model="check" title="Check me" minus-icon />
 
-    <guv-checkbox v-model="check2" title="Check me F" checked />
+    <guv-checkbox v-model="check2" title="Check me Checked" checked />
 
     <guv-checkbox v-model="check2" title="Check me F" @change="handleCheck" />
+
+    <guv-checkbox v-model="check" title="Disabled" disabled @change="handleCheck" />
+
+    <guv-checkbox v-model="check3" title="Disabled" disabled />
+
+    <guv-checkbox v-model="check3" title="Style" :style="{ marginTop: '50px' }" />
   </div>
 </template>
 
